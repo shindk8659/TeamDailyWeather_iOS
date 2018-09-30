@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        let userdata  = UserDefaults.standard
+        
+        userdata.removeObject(forKey: "usertoken")
+        userdata.removeObject(forKey: "userid")
+        userdata.removeObject(forKey: "usergu")
+        userdata.removeObject(forKey: "userrealid")
+        userdata.synchronize()
+
+        
+        IQKeyboardManager.shared.enable = true
         // Override point for customization after application launch.
         return true
     }

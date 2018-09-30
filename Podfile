@@ -8,4 +8,6 @@ target 'DailyWeather' do
     pod 'SwiftyJSON'
     pod 'Kingfisher'
     pod 'SnapKit'
+    pod 'IQKeyboardManagerSwift'
+    pod 'Floaty','~> 3.0.0'
 end

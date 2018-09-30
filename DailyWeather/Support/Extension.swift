@@ -14,7 +14,7 @@ extension UIViewController {
     class func displaySpinner(onView : UIView) -> UIView {
         let spinnerView = UIView.init(frame: UIScreen.main.bounds)
         spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-        let ai = UIActivityIndicatorView.init(activityIndicatorStyle: .whiteLarge)
+        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
         ai.color = #colorLiteral(red: 1, green: 0.434984386, blue: 0.4061706066, alpha: 1)
         ai.startAnimating()
         ai.center = spinnerView.center
@@ -38,12 +38,13 @@ extension UINavigationBar{
     
     
 }
+
 extension UITextField {
-    func setBottomBorder() {
+    func setBottomBorder(backcolor: CGColor , bordercolor: CGColor) {
         self.borderStyle = .none
-        self.layer.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        self.layer.backgroundColor = backcolor
         self.layer.masksToBounds = false
-        self.layer.shadowColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        self.layer.shadowColor = bordercolor
         self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 0.0
@@ -145,6 +146,40 @@ extension UICollectionReusableView {
 
 extension UIView
 {
+    func addTopBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x:0,y: 0, width:self.frame.size.width, height:width)
+        self.layer.addSublayer(border)
+    }
+    
+    func addRightBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x: self.frame.size.width - width,y: 0, width:width, height:self.frame.size.height)
+        self.layer.addSublayer(border)
+    }
+    
+    func addBottomBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x:0, y:self.frame.size.height - width, width:self.frame.size.width, height:width)
+        self.layer.addSublayer(border)
+    }
+    
+    func addLeftBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x:0, y:0, width:width, height:self.frame.size.height)
+        self.layer.addSublayer(border)
+    }
+    
+    func addMiddleBorderWithColor(color: UIColor, width: CGFloat) {
+        let border = CALayer()
+        border.backgroundColor = color.cgColor
+        border.frame = CGRect(x:self.frame.size.width/2, y:0, width:width, height:self.frame.size.height)
+        self.layer.addSublayer(border)
+    }
     func customLayer()
     {
         self.layer.borderColor = UIColor.white.cgColor
@@ -154,7 +189,7 @@ extension UIView
     
     func shake(_ value: Double) {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         animation.duration = 0.6
         animation.values = [-value, value, -value*(2/3), value*(2/3), -value*(1/3), value*(1/3), 0.0 ]
         layer.add(animation, forKey: "shake")

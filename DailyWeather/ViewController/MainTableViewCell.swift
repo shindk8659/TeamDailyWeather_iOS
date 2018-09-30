@@ -11,6 +11,21 @@ import UIKit
 class MainTableViewCell: UITableViewCell {
 
    
+
+    let declarNM = DeclarNM()
+   
+    var _id :String = ""
+    let userdata = UserDefaults.standard
+    @IBOutlet weak var statisticsLB: UILabel!
+    @IBOutlet weak var contentLB: UILabel!
+    @IBOutlet weak var postImg: UIImageView!
+    @IBOutlet weak var timeLB: UILabel!
+    @IBAction func declarationAction(_ sender: Any) {
+        
+   
+
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

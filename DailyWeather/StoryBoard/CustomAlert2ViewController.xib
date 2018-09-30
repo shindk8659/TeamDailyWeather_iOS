@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomAlert2ViewController" customModule="DailyWeather" customModuleProvider="target">
+            <connections>
+                <outlet property="heat1Btn" destination="828-WW-wGG" id="Rw6-H4-1Y6"/>
+                <outlet property="heat2Btn" destination="R67-FP-r62" id="f1Q-vq-dM1"/>
+                <outlet property="heat3Btn" destination="Qyc-Ye-pgH" id="d89-5C-uoO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="humidityBtn" destination="WwW-le-5wu" collectionClass="NSMutableArray" id="KKf-an-5cf"/>
+                <outletCollection property="humidityBtn" destination="nsE-sy-4Ei" collectionClass="NSMutableArray" id="zDy-Jf-0SI"/>
+                <outletCollection property="humidityBtn" destination="4lT-Ob-cSL" collectionClass="NSMutableArray" id="dfN-h5-Hmz"/>
+                <outletCollection property="windBtn" destination="Nxl-zq-bC4" collectionClass="NSMutableArray" id="rBL-Im-jbG"/>
+                <outletCollection property="windBtn" destination="rJK-sD-a2V" collectionClass="NSMutableArray" id="i5b-Zo-j33"/>
+                <outletCollection property="windBtn" destination="A8T-SD-vqQ" collectionClass="NSMutableArray" id="c9d-ec-QRb"/>
+                <outletCollection property="heatLB" destination="NAd-rq-p2u" collectionClass="NSMutableArray" id="OvO-pH-s4s"/>
+                <outletCollection property="heatLB" destination="WID-ey-Ewg" collectionClass="NSMutableArray" id="kUD-Qb-EcN"/>
+                <outletCollection property="heatLB" destination="dDd-Jz-O4G" collectionClass="NSMutableArray" id="2PO-UL-ORx"/>
+                <outletCollection property="humidityLB" destination="KRK-hE-ZOk" collectionClass="NSMutableArray" id="oRz-Sd-8Yq"/>
+                <outletCollection property="humidityLB" destination="r2u-FY-eww" collectionClass="NSMutableArray" id="Ifo-7s-aQN"/>
+                <outletCollection property="humidityLB" destination="sxW-RZ-Rul" collectionClass="NSMutableArray" id="ga3-HC-e0S"/>
+                <outletCollection property="windLB" destination="BMZ-qA-vTy" collectionClass="NSMutableArray" id="XZM-yA-zfp"/>
+                <outletCollection property="windLB" destination="S3Z-IU-OkC" collectionClass="NSMutableArray" id="1Dm-ZQ-XKR"/>
+                <outletCollection property="windLB" destination="Qso-OJ-UAC" collectionClass="NSMutableArray" id="zDd-an-eXw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0y6-cU-lJX">
+                    <rect key="frame" x="12.5" y="168.5" width="350" height="350"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="22J-5X-21q">
+                            <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날씨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgp-L9-1Xj">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="66"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.23137254901960785" green="0.59999999999999998" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kEg-2D-bSC">
+                                    <rect key="frame" x="0.0" y="66" width="350" height="218"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HCm-ks-iGW">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="66"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HUx-TA-w6N">
+                                                    <rect key="frame" x="0.0" y="0.0" width="116.5" height="66"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="828-WW-wGG">
+                                                            <rect key="frame" x="0.0" y="0.0" width="116.5" height="45.5"/>
+                                                            <state key="normal" image="hot1G"/>
+                                                            <connections>
+                                                                <action selector="heat1:" destination="-1" eventType="touchUpInside" id="Tbx-It-KXt"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="따뜻해요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAd-rq-p2u">
+                                                            <rect key="frame" x="0.0" y="45.5" width="116.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WXh-BX-XGs">
+                                                    <rect key="frame" x="116.5" y="0.0" width="117" height="66"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R67-FP-r62">
+                                                            <rect key="frame" x="0.0" y="0.0" width="117" height="45.5"/>
+                                                            <state key="normal" image="hot2G"/>
+                                                            <connections>
+                                                                <action selector="heat2:" destination="-1" eventType="touchUpInside" id="I4z-j2-bNH"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="더워요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WID-ey-Ewg">
+                                                            <rect key="frame" x="0.0" y="45.5" width="117" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eUV-k1-oQC">
+                                                    <rect key="frame" x="233.5" y="0.0" width="116.5" height="66"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyc-Ye-pgH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="116.5" height="45.5"/>
+                                                            <state key="normal" title="\" image="hot3G"/>
+                                                            <connections>
+                                                                <action selector="heat3:" destination="-1" eventType="touchUpInside" id="VH4-75-EDF"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너무더워요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDd-Jz-O4G">
+                                                            <rect key="frame" x="0.0" y="45.5" width="116.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HUx-TA-w6N" firstAttribute="width" secondItem="WXh-BX-XGs" secondAttribute="width" id="FK9-Fz-qhX"/>
+                                                <constraint firstItem="HUx-TA-w6N" firstAttribute="width" secondItem="eUV-k1-oQC" secondAttribute="width" id="f42-uk-FFv"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlb-jQ-WSq">
+                                            <rect key="frame" x="0.0" y="76" width="350" height="66"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1dj-rY-51Q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="116.5" height="66"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwW-le-5wu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="116.5" height="45.5"/>
+                                                            <state key="normal" image="humidity1G"/>
+                                                            <connections>
+                                                                <action selector="humidity1:" destination="-1" eventType="touchUpInside" id="l7E-Dr-vWC"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="건조해요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRK-hE-ZOk">
+                                                            <rect key="frame" x="0.0" y="45.5" width="116.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mun-Y0-RdO">
+                                                    <rect key="frame" x="116.5" y="0.0" width="117" height="66"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsE-sy-4Ei">
+                                                            <rect key="frame" x="0.0" y="0.0" width="117" height="45.5"/>
+                                                            <state key="normal" image="humidity2G"/>
+                                                            <connections>
+                                                                <action selector="humidity2:" destination="-1" eventType="touchUpInside" id="J3R-vk-iDG"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="적당해요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2u-FY-eww">
+                                                            <rect key="frame" x="0.0" y="45.5" width="117" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kbZ-as-sfE">
+                                                    <rect key="frame" x="233.5" y="0.0" width="116.5" height="66"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lT-Ob-cSL">
+                                                            <rect key="frame" x="0.0" y="0.0" width="116.5" height="45.5"/>
+                                                            <state key="normal" image="humidity3G"/>
+                                                            <connections>
+                                                                <action selector="humidity3:" destination="-1" eventType="touchUpInside" id="idO-YO-GYq"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="습해요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxW-RZ-Rul">
+                                                            <rect key="frame" x="0.0" y="45.5" width="116.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1dj-rY-51Q" firstAttribute="width" secondItem="Mun-Y0-RdO" secondAttribute="width" id="8Ji-yq-tCp"/>
+                                                <constraint firstItem="1dj-rY-51Q" firstAttribute="width" secondItem="kbZ-as-sfE" secondAttribute="width" id="F4G-pp-dfB"/>
+                                            </constraints>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOk-4b-pmj">
+                                            <rect key="frame" x="0.0" y="152" width="350" height="66"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PU9-um-kc8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="116.5" height="66"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxl-zq-bC4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="116.5" height="45.5"/>
+                                                            <state key="normal" image="wind1G"/>
+                                                            <connections>
+                                                                <action selector="wind1:" destination="-1" eventType="touchUpInside" id="uUB-uy-zLr"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시원해요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMZ-qA-vTy">
+                                                            <rect key="frame" x="0.0" y="45.5" width="116.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gSe-y3-uHF">
+                                                    <rect key="frame" x="116.5" y="0.0" width="117" height="66"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJK-sD-a2V">
+                                                            <rect key="frame" x="0.0" y="0.0" width="117" height="45.5"/>
+                                                            <state key="normal" image="wind2G"/>
+                                                            <connections>
+                                                                <action selector="wind2:" destination="-1" eventType="touchUpInside" id="Ktq-Ff-0cC"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="적당해요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3Z-IU-OkC">
+                                                            <rect key="frame" x="0.0" y="45.5" width="117" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6l0-cg-Vc0">
+                                                    <rect key="frame" x="233.5" y="0.0" width="116.5" height="66"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8T-SD-vqQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="116.5" height="45.5"/>
+                                                            <state key="normal" image="wind3G"/>
+                                                            <connections>
+                                                                <action selector="wind3:" destination="-1" eventType="touchUpInside" id="E1E-3h-MMx"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="바람이세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qso-OJ-UAC">
+                                                            <rect key="frame" x="0.0" y="45.5" width="116.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PU9-um-kc8" firstAttribute="width" secondItem="6l0-cg-Vc0" secondAttribute="width" id="NSK-u3-Ccm"/>
+                                                <constraint firstItem="PU9-um-kc8" firstAttribute="width" secondItem="gSe-y3-uHF" secondAttribute="width" id="nfg-fo-s2I"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HCm-ks-iGW" firstAttribute="height" secondItem="vOk-4b-pmj" secondAttribute="height" id="qjp-4E-2Ej"/>
+                                        <constraint firstItem="HCm-ks-iGW" firstAttribute="height" secondItem="nlb-jQ-WSq" secondAttribute="height" id="wYk-r3-kOk"/>
+                                    </constraints>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCB-IE-mIM">
+                                    <rect key="frame" x="0.0" y="284" width="350" height="66"/>
+                                    <state key="normal" title="확인"/>
+                                    <connections>
+                                        <action selector="selectBtn:" destination="-1" eventType="touchUpInside" id="KYK-YN-FMg"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="kEg-2D-bSC" firstAttribute="width" secondItem="22J-5X-21q" secondAttribute="width" id="OxF-UV-dro"/>
+                                <constraint firstItem="wgp-L9-1Xj" firstAttribute="width" secondItem="HCm-ks-iGW" secondAttribute="width" id="aRN-Un-R1n"/>
+                                <constraint firstItem="HCm-ks-iGW" firstAttribute="height" secondItem="LCB-IE-mIM" secondAttribute="height" id="jDr-cW-TV8"/>
+                                <constraint firstItem="wgp-L9-1Xj" firstAttribute="height" secondItem="HCm-ks-iGW" secondAttribute="height" id="nfk-yb-rNs"/>
+                                <constraint firstItem="LCB-IE-mIM" firstAttribute="width" secondItem="wgp-L9-1Xj" secondAttribute="width" id="oco-PP-vPe"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="22J-5X-21q" firstAttribute="height" secondItem="0y6-cU-lJX" secondAttribute="height" id="Hqs-Zq-pvS"/>
+                        <constraint firstItem="22J-5X-21q" firstAttribute="width" secondItem="0y6-cU-lJX" secondAttribute="width" id="J8G-P6-q3D"/>
+                        <constraint firstItem="22J-5X-21q" firstAttribute="centerX" secondItem="vSv-JT-Xa1" secondAttribute="centerX" id="Tft-Mc-3J7"/>
+                        <constraint firstItem="22J-5X-21q" firstAttribute="centerY" secondItem="vSv-JT-Xa1" secondAttribute="centerY" id="XrB-m9-OS2"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="vSv-JT-Xa1"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="0y6-cU-lJX" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="350:375" id="X6Q-bU-PUw"/>
+                <constraint firstItem="0y6-cU-lJX" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Zzg-lu-0Js"/>
+                <constraint firstItem="0y6-cU-lJX" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="350:667" id="fAV-0H-VqN"/>
+                <constraint firstItem="0y6-cU-lJX" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="xSz-L7-8AP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="hot1G" width="13" height="20"/>
+        <image name="hot2G" width="26" height="20"/>
+        <image name="hot3G" width="39" height="20"/>
+        <image name="humidity1G" width="13" height="20"/>
+        <image name="humidity2G" width="26" height="20"/>
+        <image name="humidity3G" width="39" height="20"/>
+        <image name="wind1G" width="18" height="14"/>
+        <image name="wind2G" width="36" height="14"/>
+        <image name="wind3G" width="54" height="14"/>
+    </resources>
+</document>
