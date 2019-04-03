@@ -24,6 +24,10 @@
 		5213BF1A21308F7B00E43473 /* DeclarNM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213BF1921308F7B00E43473 /* DeclarNM.swift */; };
 		521C65C4212F2745001B1DF8 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521C65C3212F2745001B1DF8 /* MypageViewController.swift */; };
 		521C65C6212F40F0001B1DF8 /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521C65C5212F40F0001B1DF8 /* DefaultTableViewCell.swift */; };
+		5235F97022548E04009FA249 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5235F96F22548E04009FA249 /* NotificationCenter.framework */; };
+		5235F97A22548E04009FA249 /* DailyWeatherWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5235F96E22548E04009FA249 /* DailyWeatherWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5235F98322548EE7009FA249 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235F97222548E04009FA249 /* TodayViewController.swift */; };
+		5235F98422548EEB009FA249 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5235F97422548E04009FA249 /* MainInterface.storyboard */; };
 		524CC107211041C300FC086A /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CC106211041C300FC086A /* APIRouter.swift */; };
 		524CC10A211042C200FC086A /* NetworkRequestor .swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CC109211042C200FC086A /* NetworkRequestor .swift */; };
 		524CC1192110538400FC086A /* Pressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CC10D2110538300FC086A /* Pressure.swift */; };
@@ -92,6 +96,30 @@
 		704C43EA215F41FA00A9D3E5 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 704C43E9215F41FA00A9D3E5 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5235F97822548E04009FA249 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 527A619F2109B52800306A36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5235F96D22548E04009FA249;
+			remoteInfo = DailyWeatherWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5235F97E22548E04009FA249 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5235F97A22548E04009FA249 /* DailyWeatherWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3FA290DA4CFC5F7BCF9B45FB /* Pods_DailyWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52118CA0211C356500685FEA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +139,13 @@
 		5213BF1921308F7B00E43473 /* DeclarNM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarNM.swift; sourceTree = "<group>"; };
 		521C65C3212F2745001B1DF8 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		521C65C5212F40F0001B1DF8 /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
+		5235F96E22548E04009FA249 /* DailyWeatherWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DailyWeatherWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5235F96F22548E04009FA249 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		5235F97222548E04009FA249 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		5235F97522548E04009FA249 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		5235F97722548E04009FA249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5235F988225491F9009FA249 /* DailyWeather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyWeather.entitlements; sourceTree = "<group>"; };
+		5235F989225492C5009FA249 /* DailyWeatherWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyWeatherWidget.entitlements; sourceTree = "<group>"; };
 		524CC106211041C300FC086A /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		524CC109211042C200FC086A /* NetworkRequestor .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkRequestor .swift"; sourceTree = "<group>"; };
 		524CC10D2110538300FC086A /* Pressure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pressure.swift; sourceTree = "<group>"; };
@@ -184,6 +219,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5235F96B22548E04009FA249 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5235F97022548E04009FA249 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		527A61A42109B52800306A36 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +276,17 @@
 				5213BF17213071D000E43473 /* AvgData.swift */,
 			);
 			path = Avg;
+			sourceTree = "<group>";
+		};
+		5235F97122548E04009FA249 /* DailyWeatherWidget */ = {
+			isa = PBXGroup;
+			children = (
+				5235F989225492C5009FA249 /* DailyWeatherWidget.entitlements */,
+				5235F97222548E04009FA249 /* TodayViewController.swift */,
+				5235F97422548E04009FA249 /* MainInterface.storyboard */,
+				5235F97722548E04009FA249 /* Info.plist */,
+			);
+			path = DailyWeatherWidget;
 			sourceTree = "<group>";
 		};
 		524CC1052110417B00FC086A /* Model */ = {
@@ -331,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				527A61A92109B52800306A36 /* DailyWeather */,
+				5235F97122548E04009FA249 /* DailyWeatherWidget */,
 				527A61A82109B52800306A36 /* Products */,
 				CBA58275F9BA933D7D6C5C63 /* Pods */,
 				57BB8FB3AED53A4E3C702DA4 /* Frameworks */,
@@ -341,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				527A61A72109B52800306A36 /* DailyWeather.app */,
+				5235F96E22548E04009FA249 /* DailyWeatherWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -348,6 +404,7 @@
 		527A61A92109B52800306A36 /* DailyWeather */ = {
 			isa = PBXGroup;
 			children = (
+				5235F988225491F9009FA249 /* DailyWeather.entitlements */,
 				524CC1052110417B00FC086A /* Model */,
 				52C6E37F210B0A1F009FB325 /* Support */,
 				52C6E37E210B0991009FB325 /* StoryBoard */,
@@ -442,6 +499,7 @@
 				704C43E7215F41FA00A9D3E5 /* SnapKit.framework */,
 				704C43E9215F41FA00A9D3E5 /* SwiftyJSON.framework */,
 				3FA290DA4CFC5F7BCF9B45FB /* Pods_DailyWeather.framework */,
+				5235F96F22548E04009FA249 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -458,6 +516,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5235F96D22548E04009FA249 /* DailyWeatherWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5235F97D22548E04009FA249 /* Build configuration list for PBXNativeTarget "DailyWeatherWidget" */;
+			buildPhases = (
+				5235F96A22548E04009FA249 /* Sources */,
+				5235F96B22548E04009FA249 /* Frameworks */,
+				5235F96C22548E04009FA249 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailyWeatherWidget;
+			productName = DailyWeatherWidget;
+			productReference = 5235F96E22548E04009FA249 /* DailyWeatherWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		527A61A62109B52800306A36 /* DailyWeather */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 527A61B92109B52900306A36 /* Build configuration list for PBXNativeTarget "DailyWeather" */;
@@ -467,10 +542,12 @@
 				527A61A42109B52800306A36 /* Frameworks */,
 				527A61A52109B52800306A36 /* Resources */,
 				E5F6E9637326D7A3F6358E6E /* [CP] Embed Pods Frameworks */,
+				5235F97E22548E04009FA249 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5235F97922548E04009FA249 /* PBXTargetDependency */,
 			);
 			name = DailyWeather;
 			productName = DailyWeather;
@@ -483,13 +560,26 @@
 		527A619F2109B52800306A36 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "신동규";
 				TargetAttributes = {
+					5235F96D22548E04009FA249 = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					527A61A62109B52800306A36 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -507,11 +597,20 @@
 			projectRoot = "";
 			targets = (
 				527A61A62109B52800306A36 /* DailyWeather */,
+				5235F96D22548E04009FA249 /* DailyWeatherWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5235F96C22548E04009FA249 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5235F98422548EEB009FA249 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		527A61A52109B52800306A36 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -535,7 +634,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DailyWeather/Pods-DailyWeather-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-DailyWeather/Pods-DailyWeather-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
@@ -556,7 +655,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DailyWeather/Pods-DailyWeather-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DailyWeather/Pods-DailyWeather-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EE528091E8947187F1964926 /* [CP] Check Pods Manifest.lock */ = {
@@ -584,6 +683,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5235F96A22548E04009FA249 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5235F98322548EE7009FA249 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		527A61A32109B52800306A36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -664,7 +771,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5235F97922548E04009FA249 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5235F96D22548E04009FA249 /* DailyWeatherWidget */;
+			targetProxy = 5235F97822548E04009FA249 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		5235F97422548E04009FA249 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5235F97522548E04009FA249 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		527A61AE2109B52800306A36 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -684,6 +807,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5235F97B22548E04009FA249 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DailyWeatherWidget/DailyWeatherWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KB65UR5HX8;
+				INFOPLIST_FILE = DailyWeatherWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DONGKYU.DailyWeather.DailyWeatherWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5235F97C22548E04009FA249 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DailyWeatherWidget/DailyWeatherWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KB65UR5HX8;
+				INFOPLIST_FILE = DailyWeatherWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DONGKYU.DailyWeather.DailyWeatherWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		527A61B72109B52900306A36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -802,8 +970,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F237FE9AFE006E3B7F395545 /* Pods-DailyWeather.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DailyWeather/DailyWeather.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KB65UR5HX8;
 				INFOPLIST_FILE = "$(SRCROOT)/DailyWeather/Support/Info.plist";
@@ -824,8 +994,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6EDEF9F312FD67DCA4587755 /* Pods-DailyWeather.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DailyWeather/DailyWeather.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KB65UR5HX8;
 				INFOPLIST_FILE = "$(SRCROOT)/DailyWeather/Support/Info.plist";
@@ -844,6 +1016,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5235F97D22548E04009FA249 /* Build configuration list for PBXNativeTarget "DailyWeatherWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5235F97B22548E04009FA249 /* Debug */,
+				5235F97C22548E04009FA249 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		527A61A22109B52800306A36 /* Build configuration list for PBXProject "DailyWeather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

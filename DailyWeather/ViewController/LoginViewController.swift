@@ -10,7 +10,11 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    let login = LoginNM()
+    let weatherModule = TNM()
+    var weather: TWeahter?
     let userdata = UserDefaults.standard
+    
     @IBAction func unwindToVC1(segue:UIStoryboardSegue) {
         userdata.removeObject(forKey: "usertoken")
         userdata.removeObject(forKey: "userid")
@@ -21,16 +25,24 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var idTF: UITextField!
     @IBOutlet weak var passTF: UITextField!
     
-    let login = LoginNM()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
         
         idTF.setBottomBorder(backcolor: #colorLiteral(red: 0.1568627451, green: 0.4941176471, blue: 0.7882352941, alpha: 1), bordercolor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
         passTF.setBottomBorder(backcolor: #colorLiteral(red: 0.1568627451, green: 0.4941176471, blue: 0.7882352941, alpha: 1), bordercolor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
+        
+        weatherModule.TWeather(city: "서울", county: "강남구" , village: "삼성동") { [weak self] temp in
+            if temp != nil{
+                self?.weather = temp
+                UserDefaults.init(suiteName: "group.io.DailyWeather.Widget")?.setValue(temp?.weather?.minutely?[0].temperature?.tc, forKey: "weatherData")
+               
+            }
+        }
       
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
     }
